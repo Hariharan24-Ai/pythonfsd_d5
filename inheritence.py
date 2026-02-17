@@ -7,24 +7,27 @@ class School:
 
     def group(self):
         if self.SSLC_marks >= 500:
-            return "Bio-Maths"
+            print("Bio-Maths")
+            self.stream = "Bio-Maths"
         elif self.SSLC_marks >= 450:
-            return "Computer Science"
+            print("Computer Science")
+            self.stream = "Computer Science"
         elif self.SSLC_marks >= 300:
-            return "Commerce"
+            print("Commerce")
+            self.stream = "Commerce"
         else:
-            return "Arts"
+            self.stream = "Arts"
 
 
 class College(School):
     def college(self):
-        if (self.HSC == "Bio-Maths" or self.HSC == "Computer Science") and self.HSC_marks >= 600:
+        if (self.stream == "Bio-Maths" or self.stream == "Computer Science") and self.HSC_marks >= 500:
             return "Congratulations! You are eligible for all Medical and Engineering colleges VIT, SRM, Anna University, and Madras University"
 
-        elif (self.HSC == "Commerce" or self.HSC == "Arts") and self.HSC_marks >= 450:
+        elif (self.stream == "Commerce" or self.stream == "Arts") and self.HSC_marks >= 450:
             return "Congratulations! You are eligible for Arts and Science colleges sathyabama and stella maris"
 
-        elif (self.HSC == "Commerce" or self.HSC == "Arts") and self.HSC_marks >= 300:
+        elif (self.stream == "Commerce" or self.stream == "Arts") and self.HSC_marks >= 300:
             return "Congratulations! You are eligible for Arts Stream only thiyagarajar college and Loyola college"
 
         else:
@@ -40,7 +43,7 @@ class College(School):
 
 
 # Create object
-student = College()
+deepak = College()
 
 # Show details
-student.display()
+deepak.display()
