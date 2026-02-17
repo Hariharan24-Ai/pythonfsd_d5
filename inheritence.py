@@ -18,7 +18,7 @@ class School:
 
 class College(School):
     def college(self):
-        if (self.HSC == "Bio-Maths" or self.HSC == "Computer Science") and self.HSC_marks >= 500:
+        if (self.HSC == "Bio-Maths" or self.HSC == "Computer Science") and self.HSC_marks >= 600:
             return "Congratulations! You are eligible for all Medical and Engineering colleges VIT, SRM, Anna University, and Madras University"
 
         elif (self.HSC == "Commerce" or self.HSC == "Arts") and self.HSC_marks >= 450:
