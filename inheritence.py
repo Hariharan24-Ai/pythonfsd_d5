@@ -6,17 +6,18 @@ class School:
         self.HSC = self.group()
 
     def group(self):
-        if self.SSLC_marks >= 500:
+        if self.SSLC_marks <= 500:
             print("Bio-Maths")
             self.stream = "Bio-Maths"
-        elif self.SSLC_marks >= 450:
+        elif self.SSLC_marks <= 450:
             print("Computer Science")
             self.stream = "Computer Science"
-        elif self.SSLC_marks >= 300:
+        elif self.SSLC_marks <= 300:
             print("Commerce")
             self.stream = "Commerce"
         else:
             self.stream = "Arts"
+            return self.stream
 
 
 class College(School):
@@ -27,7 +28,7 @@ class College(School):
         elif (self.stream == "Commerce" or self.stream == "Arts") and self.HSC_marks >= 450:
             return "Congratulations! You are eligible for Arts and Science colleges sathyabama and stella maris"
 
-        elif (self.stream == "Commerce" or self.stream == "Arts") and self.HSC_marks >= 300:
+        elif (self.stream == "Arts") and self.HSC_marks >= 300:
             return "Congratulations! You are eligible for Arts Stream only thiyagarajar college and Loyola college"
 
         else:
@@ -38,7 +39,7 @@ class College(School):
         print("Name:", self.name)
         print("SSLC Marks:", self.SSLC_marks)
         print("HSC Marks:", self.HSC_marks)
-        print("Group:", self.HSC)
+        print("Group:", self.stream)
         print("College:", self.college())
 
 
