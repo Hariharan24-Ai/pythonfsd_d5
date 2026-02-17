@@ -40,7 +40,7 @@ class College(School):
 
 
 # Create object
-deepak = College()
+student = College()
 
 # Show details
-deepak.display()
+student.display()
