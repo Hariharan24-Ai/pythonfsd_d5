@@ -12,7 +12,9 @@ class StudentData:
         print("Thanks for submitting your data,", self.name)
 
 # Create object
-student = StudentData()
+hariharan = StudentData()
+deepak = StudentData()
 
 # Call method
-student.display()
+hariharan.display()
+deepak.display()
